@@ -1,14 +1,4 @@
 <script type="text/javascript">
-(function()
-{
-  var title = document.getElementsByTagName('a')[0];
-  setInterval(function(){
-    title.innerHTML = (title.innerHTML == ">") ? ">_" : ">";
-  }, 700);
-  console.log('it ran');
-})();
-</script>
-<script type="text/javascript">
 function parseQuote(response)
 {
   document.getElementById("quote").innerHTML = response.quoteText;
