@@ -1,0 +1,8 @@
+<script type="text/javascript">
+		function parseQuote(response)
+		{
+			document.getElementById("quote").innerHTML = response.quoteText;
+			document.getElementById("author").innerHTML = response.quoteAuthor;
+		}
+</script>
+<script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote"></script>
