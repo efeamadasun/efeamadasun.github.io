@@ -1,4 +1,4 @@
-This should be where I talk about myself in the third person. But I'm not sure what I'm about yet. I'll update as things progress, and hopefully become more clear. In the mean time...
+This should be where I talk about myself in the third person. But I'm not sure what I'm about yet. In the mean time, read some quotes:
 
 <blockquote id="quote"></blockquote>
 <i id="author"></i>
