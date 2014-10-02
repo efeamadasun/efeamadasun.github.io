@@ -1,4 +1,4 @@
 title_tag_text: Efe Amadasun
-h1_tag_text: Efe put this here.
+h1_tag_text: >
 
 exclude: ["Procfile", "Gruntfile.js", "README.md", "package.json", "CNAME", "node_modules"]

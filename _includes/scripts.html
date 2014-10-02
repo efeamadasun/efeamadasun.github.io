@@ -1,8 +1,17 @@
 <script type="text/javascript">
-		function parseQuote(response)
-		{
-			document.getElementById("quote").innerHTML = response.quoteText;
-			document.getElementById("author").innerHTML = response.quoteAuthor;
-		}
+(function()
+{
+  var title = document.getElementsByTagName('a')[0];
+  setInterval(function(){
+    title.innerHTML = (title.innerHTML == ">") ? ">_" : ">";
+  }, 700);
+})();
+</script>
+<script type="text/javascript">
+function parseQuote(response)
+{
+  document.getElementById("quote").innerHTML = response.quoteText;
+  document.getElementById("author").innerHTML = response.quoteAuthor;
+}
 </script>
 <script type="text/javascript" src="http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=parseQuote"></script>

@@ -3,4 +3,5 @@
 <blockquote id="quote"></blockquote>
 <i id="author"></i>
 
-PS: You can reach me at: efeamadasun at gmail.com
+PS: You can reach me here: [efeamadasun@gmail.com](mailto:efeamadasun@gmail.com)
+PPS: Random quotes gotten from: [forismatic](http://forismatic.com/en/)
