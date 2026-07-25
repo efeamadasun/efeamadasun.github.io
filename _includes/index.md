@@ -1,7 +1,20 @@
-Page still in development. In the mean time, read some quotes:
+Hello — I’m Efe Amadasun.
 
-<blockquote id="quote"></blockquote>
-<i id="author"></i> <br>
-Quotes from: [forismatic](http://forismatic.com/en/) API
+I build software, explore product ideas, and use this site as a small home base for the things I’m working on.
 
-PS: You can reach me here: [efeamadasun@gmail.com](mailto:efeamadasun@gmail.com), here: [@efeamadasun](https://twitter.com/efeamadasun), and on [LinkedIn](https://de.linkedin.com/in/efeamadasun) 
+## Current focus
+
+- Building practical tools and experiments with software and AI
+- Sharing projects, notes, and ways to get in touch
+- Keeping this site intentionally simple, fast, and easy to maintain
+
+## Elsewhere
+
+<ul class="link-list">
+  <li><a href="mailto:efeamadasun@gmail.com">Email</a></li>
+  <li><a href="https://twitter.com/efeamadasun">Twitter / X</a></li>
+  <li><a href="https://de.linkedin.com/in/efeamadasun">LinkedIn</a></li>
+  <li><a href="https://github.com/efeamadasun">GitHub</a></li>
+</ul>
+
+If you’re here for something specific, email is the best place to start.
