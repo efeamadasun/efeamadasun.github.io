@@ -62,7 +62,7 @@ def main():
             errors += fail(f"Homepage missing expected content: {expected}")
 
     scripts = (ROOT / "_includes/scripts.html").read_text(encoding="utf-8")
-    for expected in ["quotes", "quoteForToday", "textContent"]:
+    for expected in ["quotes", "quoteForToday", "textContent", "shownQuoteIndexes", "randomUnshownQuote"]:
         if expected not in scripts:
             errors += fail(f"Quote script missing expected implementation detail: {expected}")
 
