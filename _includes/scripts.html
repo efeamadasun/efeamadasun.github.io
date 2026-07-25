@@ -70,6 +70,23 @@
     return quotes[day % quotes.length];
   }
 
+  var shownQuoteIndexes = [];
+  var currentQuoteIndex = null;
+
+  function quoteIndex(quote) {
+    return quotes.indexOf(quote);
+  }
+
+  function rememberQuote(quote) {
+    var index = quoteIndex(quote);
+
+    if (index === -1 || shownQuoteIndexes.indexOf(index) !== -1) {
+      return;
+    }
+
+    shownQuoteIndexes.push(index);
+  }
+
   function setQuote(quote) {
     var text = document.getElementById("quote-text");
     var author = document.getElementById("quote-author");
@@ -80,18 +97,34 @@
 
     text.textContent = quote.text;
     author.textContent = "— " + quote.author;
+    currentQuoteIndex = quoteIndex(quote);
   }
 
-  function randomQuote() {
-    return quotes[Math.floor(Math.random() * quotes.length)];
+  function randomUnshownQuote() {
+    var availableIndexes = quotes
+      .map(function (_, index) { return index; })
+      .filter(function (index) { return shownQuoteIndexes.indexOf(index) === -1; });
+
+    if (!availableIndexes.length) {
+      shownQuoteIndexes = currentQuoteIndex === null ? [] : [currentQuoteIndex];
+      availableIndexes = quotes
+        .map(function (_, index) { return index; })
+        .filter(function (index) { return index !== currentQuoteIndex; });
+    }
+
+    return quotes[availableIndexes[Math.floor(Math.random() * availableIndexes.length)]];
   }
 
-  setQuote(quoteForToday());
+  var todayQuote = quoteForToday();
+  setQuote(todayQuote);
+  rememberQuote(todayQuote);
 
   var button = document.getElementById("new-quote");
   if (button) {
     button.addEventListener("click", function () {
-      setQuote(randomQuote());
+      var quote = randomUnshownQuote();
+      setQuote(quote);
+      rememberQuote(quote);
     });
   }
 }());
