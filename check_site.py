@@ -70,6 +70,9 @@ def main():
     if quote_count < 50:
         errors += fail(f"Expected at least 50 local quotes, found {quote_count}")
 
+    if "Local note" in scripts:
+        errors += fail("Quote script should use known-person attributions, not 'Local note'")
+
     if errors:
         print(f"\n{errors} check(s) failed.")
         return 1
