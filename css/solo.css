@@ -222,3 +222,45 @@ pre > code {
   border-color: var(--link);
   text-decoration: none;
 }
+
+.quote-card {
+  margin: 0 0 0.75rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.quote-card blockquote {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  border-left: 0;
+  color: var(--text);
+}
+
+.quote-card figcaption {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.quote-button {
+  display: inline-block;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.35rem;
+  color: var(--link);
+  background: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.quote-button:hover,
+.quote-button:focus {
+  border-color: var(--link);
+  color: var(--link-hover);
+}
+
+.quote-button:focus-visible {
+  outline: 3px solid rgba(0, 94, 184, 0.35);
+  outline-offset: 3px;
+}

@@ -7,9 +7,15 @@ The site is a small Jekyll project based on the Solo theme.
 ## Editing
 
 - Homepage copy lives in `_includes/index.md`.
+- The local quote rotator lives in `_includes/scripts.html`.
 - Shared layout lives in `_layouts/default.html`.
 - Site metadata lives in `_config.yml`.
 - Styles live in `css/solo.css`.
+
+## Content approach
+
+- Contact links are intentionally compact: email, LinkedIn, GitHub, and Twitter / X.
+- Quotes are stored locally instead of loaded from a third-party API. This avoids privacy, reliability, mixed-content, and JSONP security issues while keeping the page dynamic.
 
 ## Local preview
 

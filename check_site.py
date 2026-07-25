@@ -12,6 +12,7 @@ REQUIRED_FILES = [
     "404.html",
     "_layouts/default.html",
     "_includes/index.md",
+    "_includes/scripts.html",
     "css/solo.css",
 ]
 DISALLOWED_PATTERNS = [
@@ -32,7 +33,7 @@ def main():
         path = ROOT / relative_path
         if not path.exists():
             errors += fail(f"Missing required file: {relative_path}")
-        elif path.is_file() and path.stat().st_size == 0 and relative_path != "_includes/scripts.html":
+        elif path.is_file() and path.stat().st_size == 0:
             errors += fail(f"Required file is empty: {relative_path}")
 
     for path in ROOT.rglob("*"):
@@ -56,9 +57,14 @@ def main():
             errors += fail(f"Layout missing expected markup: {expected}")
 
     homepage = (ROOT / "_includes/index.md").read_text(encoding="utf-8")
-    for expected in ["Hello", "Email", "LinkedIn", "GitHub"]:
+    for expected in ["Hello", "Email", "LinkedIn", "GitHub", "Thought prompt"]:
         if expected not in homepage:
             errors += fail(f"Homepage missing expected content: {expected}")
+
+    scripts = (ROOT / "_includes/scripts.html").read_text(encoding="utf-8")
+    for expected in ["quotes", "quoteForToday", "textContent"]:
+        if expected not in scripts:
+            errors += fail(f"Quote script missing expected implementation detail: {expected}")
 
     if errors:
         print(f"\n{errors} check(s) failed.")

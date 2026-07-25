@@ -1,0 +1,70 @@
+<script>
+(function () {
+  var quotes = [
+    {
+      text: "Build small things carefully; they compound into useful systems.",
+      author: "Local note"
+    },
+    {
+      text: "The best way to predict the future is to invent it.",
+      author: "Alan Kay"
+    },
+    {
+      text: "Simplicity is prerequisite for reliability.",
+      author: "Edsger W. Dijkstra"
+    },
+    {
+      text: "Programs must be written for people to read, and only incidentally for machines to execute.",
+      author: "Harold Abelson and Gerald Jay Sussman"
+    },
+    {
+      text: "Make things as simple as possible, but not simpler.",
+      author: "Often attributed to Albert Einstein"
+    },
+    {
+      text: "What you do every day matters more than what you do once in a while.",
+      author: "Gretchen Rubin"
+    },
+    {
+      text: "The details are not the details. They make the design.",
+      author: "Charles Eames"
+    },
+    {
+      text: "A good tool improves the way you work. A great tool improves the way you think.",
+      author: "Local note"
+    }
+  ];
+
+  function quoteForToday() {
+    var start = new Date(new Date().getFullYear(), 0, 0);
+    var diff = new Date() - start;
+    var day = Math.floor(diff / 86400000);
+    return quotes[day % quotes.length];
+  }
+
+  function setQuote(quote) {
+    var text = document.getElementById("quote-text");
+    var author = document.getElementById("quote-author");
+
+    if (!text || !author) {
+      return;
+    }
+
+    text.textContent = quote.text;
+    author.textContent = "— " + quote.author;
+  }
+
+  function randomQuote() {
+    return quotes[Math.floor(Math.random() * quotes.length)];
+  }
+
+  setQuote(quoteForToday());
+
+  var button = document.getElementById("new-quote");
+  if (button) {
+    button.addEventListener("click", function () {
+      setQuote(randomQuote());
+    });
+  }
+}());
+</script>
