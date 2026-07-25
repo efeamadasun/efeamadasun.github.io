@@ -16,6 +16,7 @@ The site is a small Jekyll project based on the Solo theme.
 
 - Contact links are intentionally compact: email, LinkedIn, GitHub, and Twitter / X.
 - Quotes are stored locally instead of loaded from a third-party API. This avoids privacy, reliability, mixed-content, and JSONP security issues while keeping the page dynamic.
+- Keep at least 50 quotes in `_includes/scripts.html` so the rotation has enough variety.
 
 ## Local preview
 
