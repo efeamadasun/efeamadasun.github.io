@@ -1,4 +1,13 @@
 title_tag_text: Efe Amadasun
 h1_tag_text: Efe Amadasun
+description: Personal website of Efe Amadasun.
+url: https://efeamadasun.com
 
-exclude: ["Procfile", "Gruntfile.js", "README.md", "package.json", "CNAME", "node_modules"]
+exclude:
+  - Procfile
+  - Gruntfile.js
+  - README.md
+  - check_site.py
+  - package.json
+  - CNAME
+  - node_modules
