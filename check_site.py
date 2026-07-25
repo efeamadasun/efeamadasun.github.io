@@ -66,6 +66,10 @@ def main():
         if expected not in scripts:
             errors += fail(f"Quote script missing expected implementation detail: {expected}")
 
+    quote_count = len(re.findall(r"\{\s*text:\s*\"", scripts))
+    if quote_count < 50:
+        errors += fail(f"Expected at least 50 local quotes, found {quote_count}")
+
     if errors:
         print(f"\n{errors} check(s) failed.")
         return 1

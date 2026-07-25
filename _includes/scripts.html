@@ -1,38 +1,66 @@
 <script>
 (function () {
   var quotes = [
-    {
-      text: "Build small things carefully; they compound into useful systems.",
-      author: "Local note"
-    },
-    {
-      text: "The best way to predict the future is to invent it.",
-      author: "Alan Kay"
-    },
-    {
-      text: "Simplicity is prerequisite for reliability.",
-      author: "Edsger W. Dijkstra"
-    },
-    {
-      text: "Programs must be written for people to read, and only incidentally for machines to execute.",
-      author: "Harold Abelson and Gerald Jay Sussman"
-    },
-    {
-      text: "Make things as simple as possible, but not simpler.",
-      author: "Often attributed to Albert Einstein"
-    },
-    {
-      text: "What you do every day matters more than what you do once in a while.",
-      author: "Gretchen Rubin"
-    },
-    {
-      text: "The details are not the details. They make the design.",
-      author: "Charles Eames"
-    },
-    {
-      text: "A good tool improves the way you work. A great tool improves the way you think.",
-      author: "Local note"
-    }
+    { text: "Build small things carefully; they compound into useful systems.", author: "Local note" },
+    { text: "A good tool improves the way you work. A great tool improves the way you think.", author: "Local note" },
+    { text: "Small experiments are how vague ideas become usable things.", author: "Local note" },
+    { text: "Make the next step obvious, then take it.", author: "Local note" },
+    { text: "Useful software starts with respect for somebody's time.", author: "Local note" },
+    { text: "The best interface is often the one that removes a decision.", author: "Local note" },
+    { text: "Write it down before it becomes folklore.", author: "Local note" },
+    { text: "A prototype is a question asked in code.", author: "Local note" },
+    { text: "Reliability is a feature users notice most when it is missing.", author: "Local note" },
+    { text: "Good defaults are a quiet form of hospitality.", author: "Local note" },
+    { text: "A clear constraint can be more useful than a blank canvas.", author: "Local note" },
+    { text: "The fastest system is the one that avoids unnecessary work.", author: "Local note" },
+    { text: "If the model is wrong, make the feedback loop shorter.", author: "Local note" },
+    { text: "Quality compounds when maintenance is part of the design.", author: "Local note" },
+    { text: "Learning is easier when the artifact can talk back.", author: "Local note" },
+    { text: "Clarity is kindness to your future self.", author: "Local note" },
+    { text: "Make the simple path the correct path.", author: "Local note" },
+    { text: "Automation should remove toil, not judgment.", author: "Local note" },
+    { text: "The smallest useful version is often enough to reveal the truth.", author: "Local note" },
+    { text: "Strong systems make failure visible before it becomes expensive.", author: "Local note" },
+    { text: "Design is deciding what deserves attention.", author: "Local note" },
+    { text: "A useful note is a tool you can reuse.", author: "Local note" },
+    { text: "Good code makes the next change less surprising.", author: "Local note" },
+    { text: "Momentum comes from finishing loops, not just opening them.", author: "Local note" },
+    { text: "A product is a promise repeated through details.", author: "Local note" },
+    { text: "Prefer boring foundations and interesting outcomes.", author: "Local note" },
+    { text: "The work is clearer when the tradeoffs are named.", author: "Local note" },
+    { text: "Useful abstractions reduce coordination costs.", author: "Local note" },
+    { text: "A good constraint protects attention.", author: "Local note" },
+    { text: "Measure what matters, then remember what the metric cannot see.", author: "Local note" },
+    { text: "Ship the lesson, not just the feature.", author: "Local note" },
+    { text: "Every workflow has a theory of the user inside it.", author: "Local note" },
+    { text: "Simple things scale when the edges are cared for.", author: "Local note" },
+    { text: "The right question can delete a week of work.", author: "Local note" },
+    { text: "Code is a liability until it solves a real problem.", author: "Local note" },
+    { text: "Polish is the removal of unnecessary friction.", author: "Local note" },
+    { text: "A system is healthy when it is easy to observe and safe to change.", author: "Local note" },
+    { text: "Build for the person who is tired, distracted, and in a hurry.", author: "Local note" },
+    { text: "The best documentation answers the question someone is about to ask.", author: "Local note" },
+    { text: "Do the durable thing when the temporary thing keeps coming back.", author: "Local note" },
+    { text: "Good taste is often disciplined subtraction.", author: "Local note" },
+    { text: "A demo should make the value obvious before the explanation begins.", author: "Local note" },
+    { text: "Trust grows when systems behave predictably under stress.", author: "Local note" },
+    { text: "Make the invisible state legible.", author: "Local note" },
+    { text: "Progress accelerates when decisions are easy to revisit.", author: "Local note" },
+    { text: "The best refactor is the one that makes the next bug less likely.", author: "Local note" },
+    { text: "Tools should fit the work closely enough to disappear.", author: "Local note" },
+    { text: "A small surface area is easier to understand, secure, and improve.", author: "Local note" },
+    { text: "There is no substitute for watching a real user hesitate.", author: "Local note" },
+    { text: "Make the cost of complexity visible before paying it.", author: "Local note" },
+    { text: "A calm system gives people room to think.", author: "Local note" },
+    { text: "The backlog is not a plan; it is a set of possible futures.", author: "Local note" },
+    { text: "Better naming is often better architecture in disguise.", author: "Local note" },
+    { text: "The most useful dashboard changes what someone does next.", author: "Local note" },
+    { text: "A reliable habit beats an occasional sprint.", author: "Local note" },
+    { text: "When in doubt, reduce the number of moving parts.", author: "Local note" },
+    { text: "Speed matters most after direction is clear.", author: "Local note" },
+    { text: "A good system explains itself at the point of use.", author: "Local note" },
+    { text: "Make it work, make it clear, then make it fast where it matters.", author: "Local note" },
+    { text: "The future arrives as a series of small defaults.", author: "Local note" }
   ];
 
   function quoteForToday() {
